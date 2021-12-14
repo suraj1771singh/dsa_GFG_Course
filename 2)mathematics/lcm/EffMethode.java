@@ -1,16 +1,17 @@
-
-/**
- * OptimEculideanMethode
- */
 import java.util.Scanner;
 
-public class OptimEculideanMethode {
+public class EffMethode {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
         scanner.nextLine();
         int b = scanner.nextInt();
-        System.out.println(gcd(a, b));
+        System.out.println(lcm(a, b));
+    }
+
+    public static int lcm(int a, int b) {
+        return (a * b) / gcd(a, b);
     }
 
     public static int gcd(int a, int b) {
@@ -21,7 +22,7 @@ public class OptimEculideanMethode {
             return gcd(b, a % b);
 
     }
-
 }
 
 // Time complexity : O(log(min(a,b)))
+// this is TC of eculidean Methode 

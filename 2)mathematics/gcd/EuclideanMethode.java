@@ -22,3 +22,4 @@ public class EuclideanMethode {
     }
 
 }
+// Time complexity : O(log(min(a,b)))
