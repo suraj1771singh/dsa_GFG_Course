@@ -4,7 +4,7 @@
 public class EffiApproach {
 
     public static void main(String[] args) {
-        int[] arr = new int[] { 89, 45, 101, 90 };
+        int[] arr = new int[] { 89, 45, 101, 90, 101 };
         int index = getSecondLargest(arr);
         if (index == -1)
             System.out.println("No, second largest element");
@@ -21,7 +21,7 @@ public class EffiApproach {
                 secondLargest = Largest;
                 Largest = i;
 
-            } else {
+            } else if (arr[i] != arr[Largest]) {
                 if (secondLargest == -1 || arr[i] > arr[secondLargest])
                     secondLargest = i;
             }
